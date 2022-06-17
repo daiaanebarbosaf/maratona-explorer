@@ -3,6 +3,14 @@ const elementoResposta = document.querySelector("#resposta")
 const inputPergunta = document.querySelector("#inputPergunta")
 const buttonPerguntar = document.querySelector('#buttonPerguntar')
 
+document.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    //console.log("Aperto o enter")
+    const btn = document.querySelector("#buttonPerguntar")
+    btn.click();
+  }
+})
+
 const respostas = [
   "Certeza!",
   "Não tenho tanta certeza.",
